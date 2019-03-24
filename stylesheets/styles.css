@@ -1,0 +1,363 @@
+html{
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 1.4;
+    color: #555;
+}
+
+a {
+    color: #009ced;
+    text-decoration: none;  /*無底線*/
+}
+
+a:hover{
+    color: #0081c3;
+    text-decoration: underline;
+}
+
+.container{
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.top-menu{
+    background-color: #ff9204;
+    height:36px;
+}
+
+.top-menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-menu a{
+    display: block;
+    width: 90px;
+    height: 36px;
+    line-height: 36px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.top-menu i{
+    margin-right: 5px;
+}
+
+.top-menu a:hover{
+    background-color: #ff6204;
+}
+
+h1.logo{
+    margin: 0px;
+}
+
+h1.logo img{
+    width: 250px;  /*不是區塊，不能設定寬高，但img另外*/
+    height: 62px;
+    display: block;
+}
+
+h1.logo a{
+    display: block;
+}
+
+.top-block{
+    height: 80px;
+    background-color: #ffffff;
+}
+
+.top-block .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 9px 0px;
+}
+
+.search i{
+    position: relative;
+    left: 32px;
+}
+
+/* input[type="text"]{
+    width: 285px;
+    height: 28px;
+    border: 2px #ddd solid;
+    border-radius: 17px;
+} */
+
+.search input{
+    width: 250px;
+    height: 28px;
+    border: 2px #ddd solid;
+    border-radius: 17px;
+    padding-left: 35px;
+}
+
+.search input:focus{
+    outline: none;
+    border-color: #009ced;
+    box-shadow: #009ced 0 0 5px;
+}
+
+.main-menu{
+    border-top: #ddd 1px solid;
+    border-bottom: #ddd 1px solid;
+    background-color: #ffffff;
+    height: 38px;
+}
+
+.main-menu ul{
+    margin: 0px;
+    padding: 0px;    
+    list-style: none;
+    display: flex;    
+}
+
+.main-menu a{
+    display: block;  /*從內行文字轉成區塊，成為區塊才能設長寬*/
+    height: 38px;
+    line-height: 38px;
+    font-weight: bold;
+    color: #3d4143;
+    text-align: center;
+    text-decoration: none;
+}
+
+.main-menu li{
+    flex: 0 0 20%;
+    /*flex-grow: 1;*/  /*也可以用，也能達成效果，但怕空間不夠會使內容變形*/
+}
+
+.main-menu a:hover{
+    background-color: #ff9204;
+    color: white;
+}
+
+.index-image{
+    height: 400px;
+    background: url(../images/index-image.jpg) center center no-repeat;
+    background-size: cover;  /*系統會自動計算幫你把背景填滿不變形調整適合大小*/
+    position: relative;
+}
+
+.index-image h2{
+    font-size: 50px;
+    color: #fff;  /*先寫共同認識的寫法：若認識後面，後面覆蓋前面；若不認識後面，則只做認識的部分*/
+    color: rgba(255, 255, 255, 0.8);  /*有透明度的色彩，未便免瀏覽器不支援所以在前面加設color*/
+    position: absolute;  /*絕對定位*/
+    margin: 0 0 0 150px;
+    left: 50%;
+    bottom: 80px;
+}
+
+.index-image h2 span{
+    display: block;
+    position: relative;  /*將狀態變成可以推的狀態*/
+    left: 2em;  /*推兩個字元的距離*/
+}
+
+.new-items{
+    padding: 40px 0;
+}
+
+.new-items ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-items li{
+    flex: 0 0 340px;
+}
+
+.new-items a{
+    margin: 0px;
+}
+
+.new-items p{
+    margin: 0px;
+}
+
+.featured-item{
+    background-color : #eee;
+    padding: 40px 0;
+    /* padding-top: 40;
+    padding-bottom: 40px; */
+}
+
+.featured-item h2{
+    color: #ff9204;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 30px;  /*上 左右 下*/
+}
+
+.item-content{
+    display: flex;
+}
+
+.item-img{
+    flex: 0 0 360px;
+    margin-right: 30px;
+}
+
+.item-text{
+    flex: 1;
+}
+
+.featured-item h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.item-text .user {
+    margin: 30px 0 0;
+    float: right;
+}
+
+.user img {
+    display: inline-block;
+    height: 80px;
+    right: 80px;
+    border-radius: 50%;  /*正方形才可如此，不然會變橢圓形*/
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.news-and-principle{
+    padding: 40px 0;
+}
+
+.news-and-principle .container{
+    display: flex;
+    /*justify-content: flex-start;*/
+}
+
+.news{
+    flex: 0 0 750px;
+    min-width: 0;
+}
+
+.news ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.news h2 {
+    width: 120px;
+    height: 36px;
+    margin: 0 0 20px;
+    background: url(../images/news-title@2x.png) no-repeat;
+    background-size: 100% 100%;
+    text-indent: 110%;  /*首行縮排*/
+    overflow: hidden;  /*超出範圍隱藏*/
+    white-space: nowrap;  /*不換行*/
+}
+
+.user ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.news li {
+    padding: 8px;
+    border-bottom: #ddd 1px dotted;
+}
+
+.news li:nth-child(even) {
+    background: #f5f5f5;
+}
+
+.news a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.principle {
+    flex: 0 0 280px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.principle-content{
+    background-color: #ff9204;
+    color: #fff;
+    padding: 10px;
+    margin: 0px;
+    flex-grow: 1;
+}
+
+.principle-content li{
+    margin: 10px 0px;
+    font-size: 18px;
+}
+
+.principle h2{
+    display: block;
+    height: 60px;
+    margin: 0px;
+    padding: 20px;
+    background-color: #5f5547;
+    color: #fff;
+    position: relative;
+}
+
+.principle h2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    /*color: red;*/
+    border: transparent 8px solid;
+    border-top: #ff9204 8px solid;    
+    left: 40px;
+    top: 0px;
+}
+
+.principle img{
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background-color: white;
+}
+
+.page-footer{
+    padding: 40px 0px;
+    background-color: #3d4143;
+    color: white;
+    text-align: center;
+}
+
+
+.page-footer ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.page-footer li{
+    flex: 0 0 340px;
+}
+
+.page-footer .business-hours{
+    flex: 0 0 100%;
+    margin: 20px auto;
+    /* white-space: nowrap;
+    text-align: center; */
+}
+
